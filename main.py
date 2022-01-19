@@ -2,6 +2,7 @@
 # sistema de cadastro
 l1 = '1'
 l2 = '2'
+cadst_dtb = {}
 while True:
     aswr1 = input('registrar um novo cadastro [1] efetuar login [2] ')
     print()
@@ -16,8 +17,10 @@ while True:
             if cad_psw == cad_pswck:
                 print('usuario cadastrado')
                 print()
+                cadst_dtb[cad_usr] = cad_psw
+                print(cadst_dtb)
                 break
-                
+
             else:
                 print('as senhas não coincidem')
                 continue
@@ -35,5 +38,4 @@ while True:
                 print('usuário não cadastrado')
                 continue
             break
-    break
-cadst_dtb = {cad_usr:cad_psw}
+            
