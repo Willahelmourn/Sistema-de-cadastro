@@ -18,7 +18,6 @@ while True:
                 print('usuario cadastrado')
                 print()
                 cadst_dtb[cad_usr] = cad_psw
-                print(cadst_dtb)
                 break
 
             else:
@@ -28,14 +27,15 @@ while True:
         while True:
             lgn_usr = input('digite o usuário >(')
 
-            if lgn_usr == cad_usr:
+            if lgn_usr in cadst_dtb:
                 while True:
                     lgn_psw = input('digite a senha >(')
-                    if lgn_psw == cad_psw:
+                    if lgn_psw == cadst_dtb[lgn_usr]:
                         print('login efetuado com sucesso')
                         break
+                    print('senha errada')
             else:
                 print('usuário não cadastrado')
                 continue
             break
-            
+
